@@ -1,0 +1,44 @@
+
+<h1>Palindromo </h1>
+    <input type="text" name="text" id="campo1" ></input>
+    <button onclick="palindroma()" >Send</button>
+    <label>Yes</label>
+<script>
+    
+    
+function palindroma(){
+    var word = document.getElementById("campo1").value.trim();
+    var word = word.toLowerCase().split(" ").join("");
+    console.log(word);
+    var lengthWord = word.length-1;
+  
+    var resp =1;
+    
+    
+    var contador = 0;
+    while ((contador * 2) < lengthWord){
+    
+        if (word[contador] != word[lengthWord -contador]) {
+            resp=0;
+            contador=lengthWord;
+        }
+        
+        contador++;
+    }
+    
+
+    if (resp == 0) {
+        alert("No Palindroma")
+    }else{
+        alert("Palindroma")
+    }
+
+
+
+  
+}
+
+
+
+</script>
+
